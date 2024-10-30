@@ -46,6 +46,10 @@ while not is_game_over():
     if not guess_is_valid(guess):
         continue
 
+    if guess in guesses:
+        print("Don't cheat! You've already used it)")
+        continue
+
     if guess in full_list:
         guessed += 1
         guesses.append(guess)
